@@ -1,0 +1,30 @@
+main thread
+proc thread_id = 1
+recv thread_id = 1001
+recv channel report 1
+proc thread_id = 0
+proc thread_id = 5
+proc thread_id = 8
+proc thread_id = 4
+proc thread_id = 2
+proc thread_id = 6
+proc thread_id = 7
+proc thread_id = 3
+proc thread_id = 9
+recv channel report 2
+recv channel report 3
+recv channel report 4
+recv thread: g_recv_count = 4
+thread #1: start process
+thread #0: start process
+thread #4: start process
+thread #8: start process
+thread #5: start process
+thread #3: start process
+thread #2: start process
+thread #6: start process
+thread #9: start process
+thread #7: start process
+recv channel report 1
+all proc thread done, send precode
+
