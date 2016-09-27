@@ -70,12 +70,11 @@ void proc_thread(void *param)
 
         pthread_mutex_lock(&mtx_proc);
         g_done_count++;
-        pthread_mutex_unlock(&mtx_proc);
-
         if (g_done_count == MAX_THREAD_NUM) {
             printf("all proc thread done, send precode\n");
             g_done_count = 0;
         }
+        pthread_mutex_unlock(&mtx_proc);
     }
 }
 
